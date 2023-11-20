@@ -33,6 +33,9 @@ struct LoginView: View {
                         colorText: .white,
                         background: .blue){
                             viewModel.login()
+                            AnalyticsManager.shared.logEvent(name: "Button_Login", params: [
+                                "button_name" : "Button_login"
+                            ])
                         }
                 }.offset(y: -30)
                 
@@ -46,6 +49,14 @@ struct LoginView: View {
                 
                 Spacer()
             }
+            .analyticsScreen(name: "Login View")
+            .onAppear{
+                AnalyticsManager.shared.logEvent(name: "AnalyticView_Appear")
+            }
+            .onDisappear {
+                AnalyticsManager.shared.logEvent(name: "AnalyticView_Disapear")
+            }
+            
         }
     }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C429E7092B0476E000E45712 /* launchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C429E7082B0476E000E45712 /* launchScreen.storyboard */; };
+		C44DAC512B0AF41600F40814 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C44DAC502B0AF41600F40814 /* AdSupport.framework */; };
+		C44DAC532B0AF58000F40814 /* AnalyticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44DAC522B0AF58000F40814 /* AnalyticView.swift */; };
 		C4B620642AFB20A5006E06F3 /* AppLoginApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B620632AFB20A5006E06F3 /* AppLoginApp.swift */; };
 		C4B620662AFB20A5006E06F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B620652AFB20A5006E06F3 /* MainView.swift */; };
 		C4B620682AFB20A6006E06F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B620672AFB20A6006E06F3 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		C429E7082B0476E000E45712 /* launchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = launchScreen.storyboard; sourceTree = "<group>"; };
+		C44DAC502B0AF41600F40814 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		C44DAC522B0AF58000F40814 /* AnalyticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticView.swift; sourceTree = "<group>"; };
 		C4B620602AFB20A5006E06F3 /* AppLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B620632AFB20A5006E06F3 /* AppLoginApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginApp.swift; sourceTree = "<group>"; };
 		C4B620652AFB20A5006E06F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C44DAC512B0AF41600F40814 /* AdSupport.framework in Frameworks */,
 				C4B620812AFB38C7006E06F3 /* FirebaseAnalyticsSwift in Frameworks */,
 				C4CFC96F2AFCB7FD00C7E03C /* FirebaseAuth in Frameworks */,
 				C4B6207D2AFB38C7006E06F3 /* FirebaseAnalytics in Frameworks */,
@@ -88,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C44DAC4F2B0AF3A800F40814 /* Analytic */ = {
+			isa = PBXGroup;
+			children = (
+				C44DAC522B0AF58000F40814 /* AnalyticView.swift */,
+			);
+			path = Analytic;
+			sourceTree = "<group>";
+		};
 		C4B620572AFB20A5006E06F3 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +121,7 @@
 		C4B620622AFB20A5006E06F3 /* AppLogin */ = {
 			isa = PBXGroup;
 			children = (
+				C44DAC4F2B0AF3A800F40814 /* Analytic */,
 				C4B620872AFB6587006E06F3 /* Others */,
 				C4B620862AFB653D006E06F3 /* Views */,
 				C4B620762AFB2840006E06F3 /* ViewModels */,
@@ -179,6 +193,7 @@
 		C4CFC96D2AFCB7FD00C7E03C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C44DAC502B0AF41600F40814 /* AdSupport.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -285,6 +300,7 @@
 				C4B620A12AFB6AD5006E06F3 /* LoginViewViewModel.swift in Sources */,
 				C4CFC9712AFCC1D800C7E03C /* Extensions.swift in Sources */,
 				C4B6208F2AFB68BD006E06F3 /* LoginView.swift in Sources */,
+				C44DAC532B0AF58000F40814 /* AnalyticView.swift in Sources */,
 				C4B620952AFB69CE006E06F3 /* User.swift in Sources */,
 				C4B620642AFB20A5006E06F3 /* AppLoginApp.swift in Sources */,
 				C4B6209F2AFB6AC9006E06F3 /* NewItemViewViewModel.swift in Sources */,
