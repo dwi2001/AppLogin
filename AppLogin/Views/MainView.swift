@@ -23,13 +23,13 @@ struct MainView: View {
                     .tabItem {
                         Label("account", systemImage: "person.fill")
                     }
-            }
+            } 
         } else {
             LoginView()
-
         }
     }
 }
+
 
 
 #Preview {

@@ -17,7 +17,6 @@ struct NewItemView: View {
                 .bold()
                 .padding(.top , 50)
             
-            
             Form {
                 //title
                 TextField("title", text: $viewModel.title)
@@ -33,6 +32,11 @@ struct NewItemView: View {
                 TlButton(title: "Save me", colorText: .white, background: .green) {
                     if viewModel.canSave {
                         viewModel.saveMe()
+                        AnalyticsManager.shared.logEvent(name: "add_todo", params: [
+                            "title_todo" : "\(viewModel.title)",
+                            "tanggal_create" : "\(viewModel.dueDate)"
+                            
+                        ])
                         newItemPresented = false
                     } else {
                         viewModel.showAlert = true

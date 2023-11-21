@@ -31,6 +31,12 @@ struct TodoListView: View {
                         .swipeActions{
                             Button{
                                 viewModel.delete(id: item.id)
+                                AnalyticsManager.shared.logEvent(name: "delete_todo", params: [
+                                    "title" : "\(item.title)",
+                                    "duedate" : "\(Date(timeIntervalSince1970: item.dueDate).formatted(date: .abbreviated, time: .shortened))",
+                                    "created_date" : "\(Date(timeIntervalSince1970: item.createdDate).formatted(date: .abbreviated, time: .shortened))",
+                                    "todo_status" : "\(item.isDone)"
+                                ])
                             } label: {
                                 Text("Delete")
                             }.tint(.red)

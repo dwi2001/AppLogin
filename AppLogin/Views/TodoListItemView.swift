@@ -24,6 +24,11 @@ struct TodoListItemView: View {
             
             Button {
                 viewModel.toggleIsDone(item: item)
+                AnalyticsManager.shared.logEvent(name: "List_todo_item", params: [
+                    "title" : "\(item.title)",
+                    "Due_date" : "\(Date(timeIntervalSince1970: item.dueDate).formatted(date: .abbreviated, time: .shortened))",
+                    "done" : "\(!item.isDone)"
+                    ])
             } label: {
                 Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
                     .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
